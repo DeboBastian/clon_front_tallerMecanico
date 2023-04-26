@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="clients">
+        <div class="client" *ngFor="let client of clients">
+            <article>
+                <div>
+                    <h4>{{client.name}} {{client.surname}}</h4>
+                    <p> <strong>Contact: </strong> {{client.email}} - {{client.phone}}</p>
+                </div>
+                <a [routerLink]="['/clients', client.id]" class="btn btn-light">
+                    VIEW DETAILS
+                </a>
+            </article>
+            <hr>
+        </div>
+    </div>
+    <i class="bi bi-arrow-left-circle-fill" [routerLink]="['/administration']"></i>
+</div>

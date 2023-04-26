@@ -1,0 +1,23 @@
+<div class="fondo">
+    <!-- <img src="https://alianzaautomotriz.com/wp-content/uploads/2020/02/taller-meca%CC%81nico-imagen.jpg" alt=""> -->
+
+    <div class="container">
+        <div class="new">
+            <button routerLink="/clients/new" class="btn btn bg-info">NEW CLIENT</button>
+            <button routerLink="/cars/new" class="btn btn bg-info">NEW CAR</button>
+            <button routerLink="/reparations/new" class="btn btn bg-info">NEW REPARATION</button>
+        </div>
+        <div class="info">
+            <button routerLink="/clients" type="button" class="btn btn bg-success">CLIENTS</button>
+            <button routerLink="/cars" type="button" class="btn btn bg-success">CARS</button>
+            <button routerLink="/reparations" type="button" class="btn btn bg-success">REPARATIONS</button>
+            <button routerLink="/mechanics" type="button" class="btn btn bg-success">MECHANICS</button>
+        </div>
+        <div class="employeers">
+            <button routerLink="/admins" class="btn btn bg-warning">ADMINISTRATION EMPLOYEES</button>
+            <button routerLink="/register" class="btn btn bg-warning">NEW EMPLOYEER</button>
+        </div>
+
+        <button (click)="onLogOut()" *ngIf="usersService.isLogged()" class="btn btn bg-danger">LOGOUT</button>
+    </div>
+</div>

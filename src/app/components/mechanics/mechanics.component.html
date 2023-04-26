@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="mechanics">
+        <div class="mechanic" [routerLink]="['/mechanics', mechanic.id]" *ngFor="let mechanic of mechanics">
+            <h4>{{mechanic.name}} {{mechanic.surname}}</h4>
+            <p> <strong>Contact:</strong> {{mechanic.email}} - {{mechanic.phone}}</p>
+            <hr>
+        </div>
+    </div>
+    <i class="bi bi-arrow-left-circle-fill" [routerLink]="['/administration']"></i>
+</div>

@@ -1,0 +1,25 @@
+footer {
+    background-color: 16191C;
+    /* color: #fff;
+    text-align: left;
+    padding: auto; */
+    position: relative;
+    width: 100%;
+    padding-top: 80px;
+
+
+}
+
+.container {
+    background-color: #121111;
+}
+
+p.copyright {
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    line-height: 40px;
+    font-size: 0.7em;
+    right: -20px;
+    bottom: 0;
+}

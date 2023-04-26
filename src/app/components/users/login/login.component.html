@@ -1,0 +1,56 @@
+<div>
+  <section>
+    <div class="row g-0">
+      <div class="col-lg-7 d-none d-lg-block">
+        <img class="rounded float-start img-1 min-vh-100">
+      </div>
+
+      <div class="col-lg-5 d-flex flex-column align-items-end min-vh-100">
+
+        <div class="align-self-center w-100 px-lg-5 py-lg-4 p-4">
+
+          <h1 class="font-weight-bold mb-4 text-center">WELCOME BACK</h1>
+
+          <form class="mb-5" [formGroup]="formulary" (ngSubmit)="onSubmit()">
+            <div class="mb-4">
+              <label class="form-label font-weight-bold">DNI</label>
+              <input type="text" class="form-control bg-dark-x border-0" placeholder="Enter your DNI"
+                formControlName="dni" style="color: white;">
+
+              <p class="error" *ngIf="checkError('dni', 'dnivalidator')">
+                {{ formulary.get('dni')?.errors!['dnivalidator'] }}
+              </p>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label font-weight-bold">Email</label>
+              <input type="email" class="form-control bg-dark-x border-0" placeholder="Enter your email"
+                formControlName="email" style="color: white;">
+              <p class="error" *ngIf="checkError('email', 'pattern')">
+                Email must be correct.
+              </p>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label font-weight-bold">Password</label>
+              <input type="password" class="form-control" class="form-control bg-dark-x border-0 mb-2"
+                placeholder="Enter your password" formControlName="password" style="color: white;">
+              <p class="error" *ngIf="checkError('password', 'required')">
+                This field is required.
+              </p>
+              <p class="error" *ngIf="checkError('password', 'pattern')">
+                Password must be correct.
+              </p>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">SUBMIT</button>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Foto coche amarillo perteneciente a Mark Neal en Pexels: https://www.pexels.com/es-es/foto/coche-amarillo-2218915/ -->

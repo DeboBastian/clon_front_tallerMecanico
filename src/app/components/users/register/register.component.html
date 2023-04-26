@@ -1,0 +1,132 @@
+<section>
+    <div class="row g-0">
+        <div class="col-lg-7 d-none d-lg-block">
+            <img class="rounded float-start img-1 min-vh-100">
+        </div>
+
+        <div class="col-lg-5 bg-dark d-flex flex-column align-items-end min-vh-100">
+
+            <div class="px-lg-5 pt-lg-4 pb-lg-3 p-4 mb-auto w-100">
+                <img src="/assets/img/logo.png" id="logo" class="rounded mx-auto d-block" />
+            </div>
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-8 offset-0 offset-lg-2">
+
+
+                        <form [formGroup]="formulary" (ngSubmit)="onSubmit()">
+
+                            <div class="form-group mb-3">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control" placeholder="Enter your name"
+                                    formControlName="name" style="color: white;">
+                                <p class="error" *ngIf="checkError('name', 'required')">
+                                    This field is required.
+                                </p>
+                                <p class="error" *ngIf="checkError('name', 'minlength')">
+                                    Name must have at least 3 characters.
+                                </p>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label>Surname</label>
+                                <input type="text" class="form-control" placeholder="Enter your surname"
+                                    formControlName="surname" style="color: white;">
+                                <p class="error" *ngIf="checkError('surname', 'required')">
+                                    This field is required.
+                                </p>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label>Birthdate</label>
+                                <input type="date" class="form-control" placeholder="Enter your birthdate"
+                                    formControlName="birthdate" style="color: white;">
+                                <p class="error" *ngIf="checkError('birthdate', 'required')">
+                                    This field is required.
+                                </p>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label>DNI</label>
+                                <input type="text" class="form-control" placeholder="Enter your DNI"
+                                    formControlName="dni" style="color: white;">
+                                <p class="error" *ngIf="checkError('dni', 'dnivalidator')">
+                                    {{ formulary.get('dni')?.errors!['dnivalidator'] }}
+                                </p>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label>Phone</label>
+                                <input type="text" class="form-control" placeholder="Enter your phone"
+                                    formControlName="phone" style="color: white;">
+                                <p class="error" *ngIf="checkError('phone', 'required')">
+                                    This field is required.
+                                </p>
+                                <p class="error" *ngIf="checkError('phone', 'minlength')">
+                                    Phone must have at least 9 characters.
+                                </p>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label>Email</label>
+                                <input type="email" class="form-control" placeholder="Enter your email"
+                                    formControlName="email" style="color: white;">
+                                <p class="error" *ngIf="checkError('email', 'required')">
+                                    This field is required.
+                                </p>
+                                <p class="error" *ngIf="checkError('email', 'pattern')">
+                                    Mail must be a correct format.
+                                </p>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label>Username</label>
+                                <input type="text" class="form-control" placeholder="Enter your username"
+                                    formControlName="username" style="color: white;">
+
+                                <p class="error" *ngIf="checkError('username', 'required')">
+                                    This field is required.
+                                </p>
+                                <p class="error" *ngIf="checkError('username', 'minlength')">
+                                    Username must have at least 3 characters.
+                                </p>
+                                <p class="error" *ngIf="checkError('username', 'maxlength')">
+                                    User must be a maximum of 9 characters
+                                </p>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label>Password</label>
+                                <input type="password" class="form-control" placeholder="Choose a password"
+                                    formControlName="password" style="color: white;">
+                                <p class="error" *ngIf="checkError('password', 'required')">
+                                    Password is required.
+                                </p>
+                                <p class="error" *ngIf="checkError('password', 'pattern')">
+                                    The password must contain: lowercase, uppercase and numbers. Between 3 and 8
+                                    characters
+                                </p>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label>Repeat your password</label>
+                                <input type="password" class="form-control" placeholder="Enter your password"
+                                    formControlName="repeatpassword" style="color: white;">
+                            </div>
+
+                            <label>What role are you?</label>
+                            <select class="form-select form-group mb-3" formControlName="role">
+
+                                <option value="" disabled>Choose your role</option>
+                                <option value="admin">Admin</option>
+                                <option value="mechanic">Mechanic</option>
+                            </select>
+                            <p class="error" *ngIf="checkError('role', 'required')">
+                                This field is required.
+                            </p>
+
+                            <button type="submit" class="btn btn bg">Submit</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<i class="bi bi-arrow-left-circle-fill" [routerLink]="['/administration']"></i>

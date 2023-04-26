@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="car">
+        <p> <strong>Chasis</strong> : {{car.chasis}}</p>
+        <p><strong> Registration Number:</strong> {{car.registration}}</p>
+        <p> <strong>Brand: </strong> {{car.brand}}</p>
+        <p><strong> Model:</strong> {{car.model}}</p>
+        <p><strong> Color:</strong> {{car.color}}
+        <p> <strong>KM:</strong> {{car.km}}</p>
+        <p><strong> Year:</strong> {{car.year}}</p>
+        <p><strong>Number of doors:</strong> {{car.doors}}</p>
+        <p> <strong>Type of car: </strong> {{car.type}}</p>
+        <p><strong> Type of fuel:</strong> {{car.fuel}}</p>
+        <p><strong> Damages:</strong> {{car.damages}}</p>
+
+        <button class="btn btn-warning" [routerLink]="['/cars', 'update', car.id]">✏️
+            UPDATE</button>
+
+        <button class="btn btn-danger" (click)="onClickDelete(car.id)">🗑️
+            DELETE</button>
+    </div>
+    <div *ngFor="let client of clients" class="client">
+        <h4>CLIENT OF THIS CAR</h4>
+        <h5>{{client.name}} {{client.surname}}</h5>
+        <p> <strong>Contact:</strong>
+            {{client.email}} - {{client.phone}}</p>
+        <p><strong>DNI:</strong> {{client.dni}}</p>
+        <p><strong>Address:</strong> {{client.address}}</p>
+        <p><strong>Card number:</strong> {{client.card_number}}</p>
+    </div>
+
+</div>
+
+<i class="bi bi-arrow-left-circle-fill" [routerLink]="['/cars']"></i>

@@ -1,0 +1,66 @@
+span {
+    font-weight: bold;
+}
+
+.btn {
+    min-height: 3.125rem;
+    font-weight: 600;
+}
+
+.form-control {
+    background-color: #0f1015;
+    color: #ffffff;
+    min-height: 3.125rem;
+    line-height: initial;
+    border: 1px solid #6c7293; 
+}
+
+.form-control:focus {
+    color: #ffffff;
+}
+
+img {
+    width: 100%
+}
+
+span {
+    color: #CE9529;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 5px 10px 5px;
+    background: #191c24;
+    text-decoration: none;
+    color: #CE9529;
+    border: 1px solid #CE9529;
+    border-radius: 4px;
+    font-size: 15px;
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.btn:hover {
+    color: #191c24;
+    background-color: #CE9529;
+}
+
+.img-1 {
+    background-image: url('/assets/img/asphalt-01.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+input.ng-valid.ng-touched {
+    border-color: lightgreen;
+}
+
+input.ng-invalid.ng-touched {
+    border-color: tomato;
+}
+
+.error {
+    color: tomato;
+}

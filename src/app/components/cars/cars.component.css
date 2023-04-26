@@ -1,0 +1,28 @@
+p{
+    color: white;
+    
+}
+
+hr{
+    color: bisque;
+}
+
+i{
+    font-size: 3rem;
+    padding: 20px;
+    cursor: pointer;
+}
+
+button{
+    margin: 20px;
+}
+
+
+.container{
+    margin-top: 40px;
+}
+
+strong{
+    font-weight: 600;
+    color: rgb(173, 173, 165);
+}

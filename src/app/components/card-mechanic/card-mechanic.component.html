@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="mechanic">
+        <h3>MECHANIC</h3>
+        <h4>{{mechanic.name}} {{mechanic.surname}}</h4>
+        <h5>{{mechanic.username}}</h5>
+        <p>{{mechanic.birthdate | date:"dd-MM-yyyy"}}</p>
+        <p> <strong>Contact:</strong> {{mechanic.phone}} - {{mechanic.email}}</p>
+        <p> <strong>DNI:</strong> {{mechanic.dni}}</p>
+        <p> <strong> Incorporation date:</strong> {{mechanic.incorporation_date | date:"dd-MM-yyyy"}}</p>
+
+
+    </div>
+    <hr class="border-light">
+    <div class="row">
+        <article *ngFor="let reparation of reparations" class="col-12 col-md-6 col-lg-4">
+            <div class="card border-light bg-transparent p-3 pt-4 mb-3">
+                <p> <strong>Chasis: </strong> {{reparation.chasis}}</p>
+                <p> <strong>Identification:</strong> {{reparation.registration}}</p>
+                <p> <strong>{{reparation.brand}} {{reparation.model}}</strong></p>
+                <p> <strong> Type of reparation: </strong>{{reparation.type_rep}}</p>
+                <p> <strong>More about:</strong> {{reparation.reparation}}</p>
+                <p><strong>Status:</strong> {{reparation.status}}</p>
+                <p><strong>Start Date of this reparation:</strong> {{reparation.date | date:"dd-MM-yyyy"}}</p>
+            </div>
+        </article>
+
+    </div>
+
+</div>
+
+<i class="bi bi-arrow-left-circle-fill" [routerLink]="['/mechanics']"></i>

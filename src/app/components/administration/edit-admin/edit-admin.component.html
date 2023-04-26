@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-8 offset-0 offset-lg-2">
+
+
+            <form [formGroup]="formulary" (ngSubmit)="onSubmit()">
+                <h1> UPDATE ADMIN EMPLOYEER </h1>
+
+                <div class="form-group mb-3">
+                    <label class="form-label">Name</label>
+                    <input type="text" class="form-control" placeholder="Change name" formControlName="name">
+
+                </div>
+                <div class="form-group mb-3">
+                    <label>Surname</label>
+                    <input type="text" class="form-control" placeholder="Change surname" formControlName="surname">
+
+                </div>
+                <div class="form-group mb-3">
+                    <label>Birthdate</label>
+                    <input type="date" class="form-control" placeholder="Change birthdate" formControlName="birthdate">
+
+                </div>
+                <div class="form-group mb-3">
+                    <label>DNI</label>
+                    <input type="text" class="form-control" placeholder="Change DNI" formControlName="dni">
+
+                </div>
+                <div class="form-group mb-3">
+                    <label>Phone</label>
+                    <input type="text" class="form-control" placeholder="Change phone number" formControlName="phone">
+
+                </div>
+                <div class="form-group mb-3">
+                    <label>Email</label>
+                    <input type="email" class="form-control" placeholder="Change email" formControlName="email">
+
+                </div>
+                <div class="form-group mb-3">
+                    <label>Username</label>
+                    <input type="text" class="form-control" placeholder="Change the username"
+                        formControlName="username">
+
+                </div>
+                <div class="form-group mb-3">
+                    <label>Password</label>
+                    <input type="password" class="form-control" placeholder="Change the password"
+                        formControlName="password">
+
+                </div>
+
+
+
+                <button type="submit" class="btn btn bg bg-success">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<i class="bi bi-arrow-left-circle-fill" [routerLink]="['/administration']"></i>

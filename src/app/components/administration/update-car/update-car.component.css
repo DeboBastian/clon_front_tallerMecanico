@@ -1,0 +1,55 @@
+/* .container-fluid  {
+    background-image: url('/assets/img/fondo.jpg');
+} */
+
+form {
+    border-radius: 20px;
+    margin-top: 100px;
+    width: 50%;
+    background-color: white;
+    padding: 50px;
+    opacity: 0.8;
+}
+
+.form-label {
+    color: #191c24;
+}
+
+.form-control {
+    color: #191c24;
+    font-size: 1rem;
+    border-bottom-color: #191c24;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid;
+    border-radius: 4px 4px 0 0;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #191c24;
+ }  
+
+.btn {
+    position: relative;
+    padding: 5px 10px;
+    color: #0f1015;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 500;
+    border: 1px solid #84B6F4;
+    background-color: #84B6F4;
+}
+    
+.btn:hover {
+    color: #84B6F4;
+    background-color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    form {
+        width: 100%;
+    }
+  }

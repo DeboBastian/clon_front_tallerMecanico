@@ -1,0 +1,30 @@
+.navbar-collapse {
+    text-align: center;
+}
+
+.navbar {
+    background-color: #121111;
+}
+
+.container-fluid a img {
+    width: 100px;
+    height: auto;
+}
+
+a:visited {
+    color: white;
+}
+
+h1,
+a {
+    color: white;
+}
+
+.navbar-nav .nav-link:hover {
+    transform: scale(1.1);
+}
+
+.navbar-toggler {
+    color: white;
+    background-color: white;
+}

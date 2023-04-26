@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="cars">
+        <div class="car" *ngFor="let car of cars">
+            <p><strong>Chasis:</strong> {{car.chasis}}</p>
+            <p> <strong>Brand:</strong> {{car.brand}}</p>
+            <p> <strong>Model:</strong> {{car.model}}</p>
+            <p><strong>Damages: </strong> {{car.damages}}</p>
+            <button class="btn btn-light" [routerLink]="['/cars', car.id]">VIEW DETAILS</button>
+            <hr>
+        </div>
+    </div>
+
+    <i class="bi bi-arrow-left-circle-fill" [routerLink]="['/administration']"></i>
+</div>

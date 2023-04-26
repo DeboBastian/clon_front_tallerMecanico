@@ -1,0 +1,75 @@
+<!-- SIDEBAR -->
+<div class="row">
+    <nav class="sidebar">
+        <ul class="nav">
+
+            <li class="nav-item menu-items">
+                <a class="nav-link">
+                    <span class="menu-icon">
+                        <i class='bx bx-tachometer'></i>
+                    </span>
+                    <span class="menu-title">Dashboard</span>
+                </a>
+            </li>
+
+            <li class="nav-item menu-items">
+                <a class="nav-link" routerLink="/home">
+                    <span class="menu-icon">
+                        <i class='bx bx-home-alt-2'></i>
+                    </span>
+                    <span class="menu-title">Home</span>
+                </a>
+            </li>
+
+            <li class="nav-item menu-items">
+                <a class="nav-link" routerLink="/home">
+                    <span class="menu-icon">
+                        <i class='bx bx-log-out'></i>
+                    </span>
+                    <span class="menu-title">Log out</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- REPARATIONS DETAILS -->
+    <div class="main mt-5">
+        <div class="topbar">
+            <div class="details">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>reparation orders</h2>
+                        <a routerLink="/reparations" type="button" class="btn">View All</a>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr class="menu">
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Car</th>
+                                <th>Type</th>
+                                <th>Reparation</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody class="client" *ngFor="let reparation of reparations">
+                            <tr>
+                                <select class="form-select">
+                                    <option value="pending" class="status_pending">Pending</option>
+                                    <option value="revised" class="status_in-progress">In progress</option>
+                                    <option value="revised" class="status_repaired">Repaired</option>
+                                </select>
+                                <td>{{reparation.date}}</td>
+                                <td>{{reparation.cars_id}}</td>
+                                <td>{{reparation.type_rep}}</td>
+                                <td>{{reparation.reparation}}</td>
+                                <td>{{reparation.price}}€</td>
+                                <button>Send</button>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

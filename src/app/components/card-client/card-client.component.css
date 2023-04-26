@@ -1,0 +1,64 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+p{
+    color: white;
+}
+/* 
+.delete-icon {
+    background-color: tomato;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 1000px;
+    display: inline-block;
+    margin: 0 20px;
+} */
+
+i{
+    font-size: 3rem;
+    padding: 20px;
+    cursor: pointer;
+}
+
+
+
+.container{
+    margin-top: 40px;
+}
+
+strong{
+    font-weight: 500;
+    color: rgb(237, 225, 174);
+  
+}
+
+h4{
+    padding: 20px;
+}
+
+.client{
+    margin: auto;
+    margin-right: 20px;
+    text-align: center;
+} 
+
+.cars{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    border: 1px gray solid;
+    border-radius: 5px;
+    max-width: 250px;
+    height: auto;
+    padding: 15px;
+}
+
+button{
+    margin: 30px;
+}

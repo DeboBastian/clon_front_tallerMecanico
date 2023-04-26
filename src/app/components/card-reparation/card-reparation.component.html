@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="reparation">
+        <p> <strong>Arrival date:</strong> {{reparation.date | date:"dd-MM-yyyy"}}</p>
+        <p> <strong> Status:</strong> {{reparation.status}}</p>
+        <p> <strong> Type of reparation:</strong> {{reparation.type_rep}}</p>
+        <p> <strong>More about the reparation:</strong> {{reparation.reparation}}</p>
+        <p> <strong>Price: </strong> {{reparation.price}} €
+        <p> <strong>Bill Number: </strong> {{reparation.bill_number}}</p>
+        <p> <strong>Car Identification:</strong> {{reparation.chasis}}</p>
+        <h6> {{reparation.brand}} {{reparation.model}} </h6>
+
+        <button type="button" class="btn btn-danger" (click)="onDelete(reparation.id)">🗑️ DELETE</button>
+        <button type="button" class="btn btn-warning" [routerLink]="['/reparations', 'edit', reparation.id]">✏️
+            UPDATE</button>
+
+    </div>
+
+    <div *ngFor="let mechanic of mechanics" class="mechanic">
+        <h4>MECHANIC FOR THIS CAR</h4>
+        <h5>{{mechanic.name}} {{mechanic.surname}}</h5>
+    </div>
+</div>
+
+<i class="bi bi-arrow-left-circle-fill" [routerLink]="['/reparations']"></i>

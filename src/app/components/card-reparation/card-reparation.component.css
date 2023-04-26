@@ -1,0 +1,41 @@
+.container{
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+p, h4, h5{
+    color: white;
+}
+
+button{
+    margin: 30px;
+}
+
+i{
+    font-size: 3rem;
+    padding: 20px;
+    cursor: pointer;
+}
+
+
+
+.container{
+    margin-top: 40px;
+}
+
+strong{
+    font-weight: 500;
+    color: rgb(237, 225, 174);
+  
+}
+
+.mechanic{
+    margin: auto;
+    margin-right: 20px;
+    text-align: center;
+}
+
+h5{
+    padding: 20px;
+}

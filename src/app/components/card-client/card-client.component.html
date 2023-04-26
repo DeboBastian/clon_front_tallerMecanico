@@ -1,0 +1,47 @@
+<div class="container">
+    <article>
+        <div class="client">
+            <h4>CLIENT</h4>
+            <h4>{{client.name}} {{client.surname}}</h4>
+            <p> <strong>Email:</strong> {{client.email}}</p>
+            <p> <strong>Phone:</strong> {{client.phone}}</p>
+            <p> <strong>DNI:</strong> {{client.dni}}
+            <p> <strong>Address:</strong> {{client.address}}</p>
+            <p> <strong>Card number:</strong> {{client.card_number}}</p>
+
+
+            <button type="button" class="btn btn-danger" (click)="deleteClient(client)">🗑️ DELETE</button>
+
+            <button type="button" class="btn btn-warning" [routerLink]="['/clients', 'update', client.id]">✏️
+                UPDATE</button>
+        </div>
+
+    </article>
+
+    <br>
+
+    <div *ngFor="let car of cars" class="cars">
+        <h4>CLIENT CARS</h4>
+        <p><strong>Chasis:</strong> {{car.chasis}}</p>
+        <p><strong>Registration number: </strong> {{car.registration}}</p>
+        <h5>{{car.brand}}</h5>
+        <br>
+        <h5>{{car.model }} </h5>
+        <br>
+        <p> <strong>Color:</strong> {{car.color }} </p>
+        <br>
+        <p> <strong>KM:</strong> {{car.km }} </p>
+        <br>
+        <p><strong> Year:</strong> {{car.year }}</p>
+        <br>
+        <p> <strong>Number of doors:</strong> {{car.doors}}</p>
+        <br>
+        <p> <strong>Type of car: </strong> {{car.type}}</p>
+        <br>
+        <p><strong>Type of fuel: </strong> {{car.fuel}}</p>
+        <br>
+        <p> <strong>Damages: </strong> {{car.damages}}</p>
+    </div>
+</div>
+
+<i class="bi bi-arrow-left-circle-fill" [routerLink]="['/clients']"></i>

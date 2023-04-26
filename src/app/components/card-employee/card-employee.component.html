@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="admin">
+        <h4>Name: {{admin.name}} {{admin.surname}}</h4>
+        <h5>{{admin.username}}</h5>
+        <p>{{admin.birthdate}}</p>
+        <p> <strong>Contact:</strong> {{admin.phone}} - {{admin.email}}</p>
+        <p><strong>DNI: </strong> {{admin.dni}}</p>
+        <p> <strong> Incorporation date: </strong>{{admin.incorporation_date | date:"dd-MM-yyyy"}}</p>
+
+        <button type="button" class="btn btn-danger" (click)="onClick(admin.id)">🗑️ DELETE</button>
+        <button type="button" class="btn btn-warning" [routerLink]="['/users', 'edit', admin.id]">✏️
+            UPDATE</button>
+
+    </div>
+
+</div>
+<i class="bi bi-arrow-left-circle-fill" [routerLink]="['/admins']"></i>

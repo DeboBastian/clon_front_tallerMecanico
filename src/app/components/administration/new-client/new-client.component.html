@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-8 offset-0 offset-lg-2">
+
+            <form [formGroup]="formulary" (ngSubmit)="onSubmit()">
+                <h1> NEW CLIENT </h1>
+                <div class="form-group mb-3">
+                    <label class="form-label">Name</label>
+                    <input type="text" class="form-control" placeholder="Name" formControlName="name">
+                </div>
+
+                <div class="form-group mb-3">
+                    <label class="form-label">Surname</label>
+                    <input type="text" class="form-control" placeholder="Surname" formControlName="surname">
+                </div>
+
+                <div class="form-group mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" placeholder="Email" formControlName="email">
+                </div>
+
+                <div class="form-group mb-3">
+                    <label class="form-label">Phone</label>
+                    <input type="text" class="form-control" placeholder="Telephone Number" formControlName="phone">
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-label">DNI</label>
+                    <input type="text" class="form-control" placeholder="Identification Document" formControlName="dni">
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-label">Adress</label>
+                    <input type="text" class="form-control" placeholder="Address" formControlName="address">
+                </div>
+                <div class="form-group mb-3">
+                    <label class="form-label">Card Number</label>
+                    <input type="number" class="form-control" placeholder="Card Number" formControlName="card_number">
+                </div>
+                <button type="submit" class="btn btn bg-success">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<i class="bi bi-arrow-left-circle-fill" [routerLink]="['/administration']"></i>

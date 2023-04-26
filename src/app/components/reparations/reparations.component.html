@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="reparations">
+        <div class="reparation" *ngFor="let reparation of reparations">
+            <p><strong>Arrival Date: </strong>{{reparation.date | date:"dd-MM-yyyy"}}</p>
+            <p><strong>Status:</strong> {{reparation.status}}</p>
+            <p><strong>User:</strong> {{reparation.users_id}}</p>
+
+            <button type="button" class="btn btn-light" [routerLink]="['/reparations', reparation.id]">VIEW
+                DETAILS</button>
+            <hr>
+        </div>
+
+    </div>
+    <i class="bi bi-arrow-left-circle-fill" [routerLink]="['/administration']"></i>
+</div>

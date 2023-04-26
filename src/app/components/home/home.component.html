@@ -1,0 +1,10 @@
+<div class="title-container d-flex flex-column align-items-center ">
+    <div style="position:relative;">
+        <img src="https://i.postimg.cc/zGktHRFZ/Disen-o-sin-ti-tulo-Photo-Room-png-Photo-Room.png" alt="imagen">
+        <div class="title-overlay center-block"
+            style="position:absolute; top:50%; left: 50%; transform:translate(-50%, -50%);">
+            <button routerLink="/login" type="button" class="btn-login btn-lg">Login</button>
+            <button (click)="onLogOut()" *ngIf="usersService.isLogged()" class="btn-logout btn-lg">Logout</button>
+        </div>
+    </div>
+</div>

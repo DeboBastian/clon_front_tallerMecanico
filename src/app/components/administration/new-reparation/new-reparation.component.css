@@ -1,0 +1,17 @@
+label{
+    color: white;
+}
+
+i{
+    font-size: 3rem;
+    padding: 20px;
+    cursor: pointer;
+}
+
+
+h1{
+    text-align: center;
+    color: gray;
+    margin-top: 30px;
+    padding: 20px;
+}

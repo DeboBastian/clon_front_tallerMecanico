@@ -1,0 +1,67 @@
+.title-container {
+    background-color: #121111;
+}
+
+
+
+.container {
+    text-align: center;
+}
+
+
+.button:hover {
+    transform: scale(1.1);
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.image-container {
+    position: relative;
+
+}
+
+.btn-login {
+    border-radius: 20px;
+    background-color: #023876;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    transition: box-shadow 1s;
+    margin: 30px 30px 30px 30px;
+}
+
+.btn-login:hover {
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+
+.btn-logout {
+    border-radius: 20px;
+    background-color: #023876;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    transition: box-shadow 1s;
+    margin: 30px 30px 30px 30px;
+}
+
+.btn-logout:hover {
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+
+.btn-lg {
+    font-size: 1.5rem;
+
+    padding: 12px 24px;
+
+}
