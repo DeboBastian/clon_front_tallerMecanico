@@ -37,6 +37,16 @@ export class ReparationsService {
     return firstValueFrom(this.httpClient.get<any>(this.baseUrl))
   }
 
+  getMechanicTable() {
+    /* const options = {
+      headers: new HttpHeaders({
+        'Authorization': localStorage.getItem('token_key')!
+      })
+    } */
+    return firstValueFrom(this.httpClient.get<any>(`${this.baseUrl}/mechTable`))
+
+  }
+
   getById(id: number) {
     // const options = {
     //   headers: new HttpHeaders({

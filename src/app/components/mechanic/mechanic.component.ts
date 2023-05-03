@@ -13,13 +13,17 @@ export class MechanicComponent {
   reparations!: Reparation[]
 
   constructor(
-        private reparationsService: ReparationsService
-        ) { 
-        this.reparations = [];
-        }
+    private reparationsService: ReparationsService
+  ) {
+    this.reparations = [];
+  }
 
   async ngOnInit() {
-    this.reparations = await this.reparationsService.getAllReparations();
+
+    this.reparations = await this.reparationsService.getMechanicTable();
+    console.log(this.reparations);
+
+
   }
 
 

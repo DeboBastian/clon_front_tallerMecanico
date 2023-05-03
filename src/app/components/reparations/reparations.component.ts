@@ -47,5 +47,5 @@ export class ReparationsComponent {
       this.router.navigate(['/mechanic'])
     }
   }
-
 }
+

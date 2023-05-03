@@ -64,10 +64,10 @@
                             <tr class="menu">
                                 <th>Status</th>
                                 <th>Date</th>
-                                <th>Car</th>
-                                <th>Type</th>
+                                <th>Brand</th>
+                                <th>Model</th>
                                 <th>Reparation</th>
-                                <th>Price</th>
+                                <th>Type</th>
                             </tr>
                         </thead>
                         <tbody class="client" *ngFor="let reparation of reparations">
@@ -78,10 +78,10 @@
                                     <option value="revised" class="status_repaired">Repaired</option>
                                 </select>
                                 <td>{{reparation.date | date:"dd-MM-yyyy"}}</td>
-                                <td>{{reparation.cars_id}}</td>
+                                <td>{{reparation.brand}}</td>
+                                <td>{{reparation.model}}</td>
                                 <td>{{reparation.type_rep}}</td>
                                 <td>{{reparation.reparation}}</td>
-                                <td>{{reparation.price}}€</td>
                                 <button>Send</button>
                             </tr>
                         </tbody>

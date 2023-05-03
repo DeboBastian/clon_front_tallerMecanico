@@ -10,7 +10,7 @@
         <h6> {{reparation.brand}} {{reparation.model}} </h6>
 
         <button type="button" class="btn btn-danger" (click)="onDelete(reparation.id)">🗑️ DELETE</button>
-        <button type="button" class="btn btn-warning" [routerLink]="['/reparations', 'edit', reparation.id]">✏️
+        <button type="button" class="btn btn-warning" (click)="onUpdate(reparation.id)">✏️
             UPDATE</button>
 
     </div>
