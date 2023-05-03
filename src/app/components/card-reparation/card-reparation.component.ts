@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Reparation } from 'src/app/interfaces/reparation.interface';
 import { User } from 'src/app/interfaces/user.interface';
 import { ReparationsService } from 'src/app/services/reparations.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-card-reparation',
@@ -13,6 +14,7 @@ export class CardReparationComponent {
 
   reparation: any
   mechanics: User[]
+  log: any
 
   constructor(
     private reparationsService: ReparationsService,
@@ -33,6 +35,7 @@ export class CardReparationComponent {
     }
 
     this.mechanics = []
+    this.log = {}
   }
 
   ngOnInit() {
@@ -52,8 +55,15 @@ export class CardReparationComponent {
 
   async onDelete(reparationId: any) {
     try {
-      await this.reparationsService.deleteReparation(reparationId)
-      this.router.navigate(['/reparations'])
+      this.log = await this.reparationsService.deleteReparation(reparationId)
+      if (this.log === 'DEBES SER ADMIN') {
+        await Swal.fire('You need to be Admin', '', 'error');
+
+      } else {
+        this.router.navigate(['/reparations'])
+      }
+
+
     } catch (error) {
       console.log(error)
     }

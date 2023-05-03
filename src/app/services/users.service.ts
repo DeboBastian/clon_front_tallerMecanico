@@ -29,10 +29,10 @@ export class UsersService {
     //     'Authorization': localStorage.getItem('token_key')!
     //   })
     // }
-    
+
     return firstValueFrom(
       this.httpClient.post<any>(`${this.baseUrl}/register`, body)
-      
+
     )
   }
 
@@ -70,7 +70,7 @@ export class UsersService {
     );
   }
 
-  
+
   deleteAdmin(id: number) {
     // const options = {
     //   headers: new HttpHeaders({
@@ -80,7 +80,7 @@ export class UsersService {
     return firstValueFrom(this.httpClient.delete<any>(`${this.baseUrl}/admin/${id}`))
   }
 
-  
+
   getAllAdmin() {
     // const options = {
     //   headers: new HttpHeaders({
@@ -100,6 +100,14 @@ export class UsersService {
     return firstValueFrom(this.httpClient.get<any>(`${this.baseUrl}/admins/${id}`))
   }
 
-
+  checkAdmin() {
+    const options = {
+      headers: new HttpHeaders({
+        'Authorization': localStorage.getItem('token_key')!
+      })
+    }
+    return firstValueFrom(this.httpClient.get<any>(`${this.baseUrl}/admin/`))
+  }
 
 }
+

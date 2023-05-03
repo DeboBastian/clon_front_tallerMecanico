@@ -22,6 +22,24 @@
             </li>
 
             <li class="nav-item menu-items">
+                <a class="nav-link" routerLink="/cars">
+                    <span class="menu-icon">
+                        <i class='bx bx-car'></i>
+                    </span>
+                    <span class="menu-title">Cars</span>
+                </a>
+            </li>
+
+            <li class="nav-item menu-items">
+                <a class="nav-link" routerLink="/reparations">
+                    <span class="menu-icon">
+                        <i class='bx bx-wrench'></i>
+                    </span>
+                    <span class="menu-title">Reparations</span>
+                </a>
+            </li>
+
+            <li class="nav-item menu-items">
                 <a class="nav-link" routerLink="/home">
                     <span class="menu-icon">
                         <i class='bx bx-log-out'></i>
@@ -39,7 +57,7 @@
                 <div class="recentOrders">
                     <div class="cardHeader">
                         <h2>reparation orders</h2>
-                        <a routerLink="/reparations" type="button" class="btn">View All</a>
+
                     </div>
                     <table>
                         <thead>
@@ -59,7 +77,7 @@
                                     <option value="revised" class="status_in-progress">In progress</option>
                                     <option value="revised" class="status_repaired">Repaired</option>
                                 </select>
-                                <td>{{reparation.date}}</td>
+                                <td>{{reparation.date | date:"dd-MM-yyyy"}}</td>
                                 <td>{{reparation.cars_id}}</td>
                                 <td>{{reparation.type_rep}}</td>
                                 <td>{{reparation.reparation}}</td>

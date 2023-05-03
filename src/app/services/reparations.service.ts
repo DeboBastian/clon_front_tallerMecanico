@@ -11,7 +11,7 @@ export class ReparationsService {
 
   constructor(
     private httpClient: HttpClient
-  ) { 
+  ) {
     this.baseUrl = 'http://localhost:3000/api/reparations'
   }
 
@@ -26,7 +26,7 @@ export class ReparationsService {
       this.httpClient.post<any>(this.baseUrl, body)
     )
 
-} 
+  }
 
   getAllReparations() {
     // const options = {
@@ -68,22 +68,22 @@ export class ReparationsService {
 
 
   deleteReparation(id: number) {
-    // const options = {
-    //   headers: new HttpHeaders({
-    //     'Authorization': localStorage.getItem('token_key')!
-    //   })
-    // }
+    const options = {
+      headers: new HttpHeaders({
+        'Authorization': localStorage.getItem('token_key')!
+      })
+    }
     return firstValueFrom(this.httpClient.delete<any>(`${this.baseUrl}/${id}`))
   }
 
 
 
   updateReparation(values: any, id: number) {
-    // const options = {
-    //   headers: new HttpHeaders({
-    //     'Authorization': localStorage.getItem('token_key')!
-    //   })
-    // }
+    const options = {
+      headers: new HttpHeaders({
+        'Authorization': localStorage.getItem('token_key')!
+      })
+    }
     return firstValueFrom(
       this.httpClient.put<any>(`${this.baseUrl}/edit/${id}`, values)
     );
