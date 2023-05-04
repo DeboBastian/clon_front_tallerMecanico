@@ -8,5 +8,7 @@ export interface Reparation {
     price: string;
     bill_number?: string;
     users_id?: number;
-    cars_id ?: number;
+    cars_id?: number;
+    brand?: string;
+    model?: string;
 }

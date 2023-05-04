@@ -22,6 +22,24 @@
             </li>
 
             <li class="nav-item menu-items">
+                <a class="nav-link" routerLink="/cars">
+                    <span class="menu-icon">
+                        <i class='bx bx-car'></i>
+                    </span>
+                    <span class="menu-title">Cars</span>
+                </a>
+            </li>
+
+            <li class="nav-item menu-items">
+                <a class="nav-link" routerLink="/reparations">
+                    <span class="menu-icon">
+                        <i class='bx bx-wrench'></i>
+                    </span>
+                    <span class="menu-title">Reparations</span>
+                </a>
+            </li>
+
+            <li class="nav-item menu-items">
                 <a class="nav-link" routerLink="/home">
                     <span class="menu-icon">
                         <i class='bx bx-log-out'></i>
@@ -39,17 +57,17 @@
                 <div class="recentOrders">
                     <div class="cardHeader">
                         <h2>reparation orders</h2>
-                        <a routerLink="/reparations" type="button" class="btn">View All</a>
+
                     </div>
                     <table>
                         <thead>
                             <tr class="menu">
                                 <th>Status</th>
                                 <th>Date</th>
-                                <th>Car</th>
-                                <th>Type</th>
+                                <th>Brand</th>
+                                <th>Model</th>
                                 <th>Reparation</th>
-                                <th>Price</th>
+                                <th>Type</th>
                             </tr>
                         </thead>
                         <tbody class="client" *ngFor="let reparation of reparations">
@@ -59,11 +77,11 @@
                                     <option value="revised" class="status_in-progress">In progress</option>
                                     <option value="revised" class="status_repaired">Repaired</option>
                                 </select>
-                                <td>{{reparation.date}}</td>
-                                <td>{{reparation.cars_id}}</td>
+                                <td>{{reparation.date | date:"dd-MM-yyyy"}}</td>
+                                <td>{{reparation.brand}}</td>
+                                <td>{{reparation.model}}</td>
                                 <td>{{reparation.type_rep}}</td>
                                 <td>{{reparation.reparation}}</td>
-                                <td>{{reparation.price}}€</td>
                                 <button>Send</button>
                             </tr>
                         </tbody>
