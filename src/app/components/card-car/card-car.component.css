@@ -1,47 +1,47 @@
-.container{
+.container {
     display: flex;
     justify-content: space-between;
 }
 
-p{
+p {
     color: white;
-   
+
 }
 
-h4{
- color: white;
-}
-
-h3{
+h4 {
     color: white;
 }
 
-i{
+h3 {
+    color: white;
+}
+
+i {
     font-size: 3rem;
     padding: 20px;
     cursor: pointer;
 }
 
-button{
+button {
     margin: 20px;
 }
 
-.container{
+.container {
     margin-top: 40px;
 }
 
-strong{
+strong {
     font-weight: 500;
     color: rgb(237, 225, 174);
-  
+
 }
 
-.mechanic{
+.mechanic {
     margin: auto;
     margin-right: 20px;
     text-align: center;
 }
 
-h5{
+h5 {
     padding: 20px;
 }
